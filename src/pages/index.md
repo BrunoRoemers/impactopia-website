@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Impactopia
-image: /img/home-jumbotron.jpg
+image: /img/jaimie-phillips-kamss2eucza-unsplash.jpg
 heading: Great coffee with a conscience
 subheading: Connecting DAO's, cooperatives and collectives for a more
   sustainable and equitable future
