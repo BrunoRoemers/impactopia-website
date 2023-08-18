@@ -3,7 +3,8 @@ templateKey: index-page
 title: Impactopia
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+subheading: Connecting DAO's, cooperatives and collectives for a more
+  sustainable and equitable future
 mainpitch:
   title: Why Kaldi
   description: >
