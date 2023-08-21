@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
-    {gridItems.map((item) => (
-      <div key={item.text} className="column is-4">
+    {gridItems.map((item, i) => (
+      <div key={item.text} className={`column is-${item.size}`}>
         <section className="section" style={{ padding: "1.5rem" }}>
           {/* <div className="has-text-centered">
             <div

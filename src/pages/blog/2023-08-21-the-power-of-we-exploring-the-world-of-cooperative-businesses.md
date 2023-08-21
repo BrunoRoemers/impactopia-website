@@ -5,6 +5,8 @@ date: 2023-05-23T22:13:13.337Z
 description: ""
 featuredpost: false
 featuredimage: /img/hannah-busing-zyx1bk9mqma-unsplash.jpg
+tags:
+  - Cooperatives
 ---
 When people come together to achieve a common goal, something magical happens. A sense of community is born, values are shared, and powerful connections are made. This is precisely what cooperatives (coops) are all about. These are autonomous associations of individuals who voluntarily unite to meet their common economic, social, or cultural needs and aspirations through a jointly and democratically controlled enterprise. The definition may sound academic, but the spirit of cooperation is alive and well in every coop around the world.
 

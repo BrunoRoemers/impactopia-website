@@ -20,13 +20,16 @@ blurbs:
       intelligence is the best way to reach goals and create positive impacts.
       We pay attention to all voices.
     image: /img/coffee.png
+    size: 4
   - title: Mutual Learning
     text: We recognise, share and embrace each other's experience, skills and
       knowledge.
     image: /img/coffee-gear.png
+    size: 4
   - title: Caring
     text: We are a safe haven. We look after each other and our surroundings. We are
       mindful of our actions and take responsibility for our impact on others
       and the world around us.
     image: /img/tutorials.png
+    size: 4
 ---
