@@ -1,9 +1,10 @@
 ---
 templateKey: index-page
 hero:
-  title: Impactopia
-  subheading: Connecting DAO's, cooperatives and collectives for a more sustainable and equitable future
+  title: ""
+  subheading: ""
   backgroundImage: /img/jaimie-phillips-kamss2eucza-unsplash.jpg
+  logo: /img/impactopia-logo-square-high-res_adobe_express-logo-only.svg
 mainPitch:
   title: ""
   description: Impactopia is a community of people seeking to explore together all

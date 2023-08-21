@@ -47,9 +47,10 @@ collections:
               widget: "object",
               fields:
                 [
-                  { label: Title, name: title, widget: string },
-                  { label: Subheading, name: subheading, widget: string },
-                  { label: Image, name: backgroundImage, widget: image },
+                  { label: Title, name: title, widget: string, required: false },
+                  { label: Subheading, name: subheading, widget: string, required: false },
+                  { label: Logo, name: logo, widget: image },
+                  { label: Background Image, name: backgroundImage, widget: image },
                 ]
             }
           - {

@@ -5,7 +5,8 @@ import { GatsbyImage } from "gatsby-plugin-image";
 export default function FullWidthImage(props) {
   const {
     height = 400,
-    img,
+    backgroundImage,
+    logo,
     title,
     subheading,
     imgPosition = "top left",
@@ -20,9 +21,9 @@ export default function FullWidthImage(props) {
           alignItems: "center",
         }}
       >
-        {img?.url ? (
+        {backgroundImage?.url ? (
           <img
-            src={img}
+            src={backgroundImage}
             objectFit={"cover"}
             objectPosition={imgPosition}
             style={{
@@ -36,7 +37,7 @@ export default function FullWidthImage(props) {
           />
         ) : (
           <GatsbyImage
-            image={img}
+            image={backgroundImage}
             objectFit={"cover"}
             objectPosition={imgPosition}
             style={{
@@ -52,7 +53,7 @@ export default function FullWidthImage(props) {
             formats={["auto", "webp", "avif"]}
           />
         )}
-        {(title || subheading) && (
+        {(title || subheading || logo) && (
           <div
             style={{
               // By using the same grid area for both, they are stacked on top of each other
@@ -65,16 +66,41 @@ export default function FullWidthImage(props) {
             }}
           >
             {/* Any content here will be centered in the component */}
+            {logo && (
+              <div
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "50%",
+                  padding: "10px",
+                }}
+              >
+                {logo.childImageSharp ? (
+                  <GatsbyImage
+                    image={logo}
+                    alt="Impactopia"
+                    style={{ width: "150px", height: "150px" }}
+                  />
+                ) : (
+                  <img
+                    src={logo.publicURL || logo.url}
+                    alt="Impactopia"
+                    style={{ maxWidth: "150px" }}
+                  />
+                )}
+              </div>
+            )}
             {title && (
               <h1
                 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
                 style={{
-                  boxShadow:
-                    "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                  backgroundColor: "rgb(255, 68, 0)",
-                  color: "white",
+                  // boxShadow:
+                  //   "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
+                  // backgroundColor: "rgb(255, 68, 0)",
+                  backgroundColor: "white",
+                  // color: "white",
                   lineHeight: "1",
                   padding: "0.25em",
+                  marginTop: "0.5rem",
                 }}
               >
                 {title}
@@ -86,8 +112,9 @@ export default function FullWidthImage(props) {
                 style={{
                   // boxShadow:
                   //   "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-                  backgroundColor: "rgb(255, 68, 0)",
-                  color: "white",
+                  // backgroundColor: "rgb(255, 68, 0)",
+                  background: "white",
+                  // color: "white",
                   lineHeight: "1",
                   padding: "0.25rem",
                   marginTop: "0.5rem",

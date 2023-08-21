@@ -16,11 +16,18 @@ export const IndexPageTemplate = ({
   description,
   blurbs,
 }) => {
-  const heroImage = getImage(hero.backgroundImage) || hero.backgroundImage;
+  const heroLogo = getImage(hero.logo) || hero.logo;
+  const heroBackgroundImage =
+    getImage(hero.backgroundImage) || hero.backgroundImage;
 
   return (
     <div>
-      <FullWidthImage img={heroImage} title={hero.title} subheading={hero.subheading} />
+      <FullWidthImage
+        logo={heroLogo}
+        backgroundImage={heroBackgroundImage}
+        title={hero.title}
+        subheading={hero.subheading}
+      />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -79,7 +86,7 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
+  mainPitch: PropTypes.object,
   description: PropTypes.string,
   blurbs: PropTypes.array,
 };
@@ -120,6 +127,13 @@ export const pageQuery = graphql`
           backgroundImage {
             childImageSharp {
               gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+            }
+          }
+          logo {
+            publicURL
+            childImageSharp {
+              # NOTE: null in case of SVG
+              gatsbyImageData(width: 240)
             }
           }
         }
