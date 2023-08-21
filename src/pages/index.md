@@ -1,10 +1,10 @@
 ---
 templateKey: index-page
-title: Impactopia
-subheading: Connecting DAO's, cooperatives and collectives for a more
-  sustainable and equitable future
-image: /img/jaimie-phillips-kamss2eucza-unsplash.jpg
-mainpitch:
+hero:
+  title: Impactopia
+  subheading: Connecting DAO's, cooperatives and collectives for a more sustainable and equitable future
+  backgroundImage: /img/jaimie-phillips-kamss2eucza-unsplash.jpg
+mainPitch:
   title: ""
   description: Impactopia is a community of people seeking to explore together all
     the facets of cooperativism, web3, common goods, shared governance, and

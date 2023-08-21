@@ -41,12 +41,20 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
-          - { label: Title, name: title, widget: string }
-          - { label: Subheading, name: subheading, widget: string }
-          - { label: Image, name: image, widget: image }
           - {
-              label: Mainpitch,
-              name: mainpitch,
+              label: "Hero",
+              name: "hero",
+              widget: "object",
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: Subheading, name: subheading, widget: string },
+                  { label: Image, name: backgroundImage, widget: image },
+                ]
+            }
+          - {
+              label: MainPitch,
+              name: mainPitch,
               widget: object,
               fields:
                 [

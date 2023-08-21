@@ -10,19 +10,17 @@ import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
-  image,
-  title,
+  hero,
+  mainPitch,
   heading,
-  subheading,
-  mainpitch,
   description,
   blurbs,
 }) => {
-  const heroImage = getImage(image) || image;
+  const heroImage = getImage(hero.backgroundImage) || hero.backgroundImage;
 
   return (
     <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+      <FullWidthImage img={heroImage} title={hero.title} subheading={hero.subheading} />
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -30,13 +28,13 @@ export const IndexPageTemplate = ({
               <div className="column is-10 is-offset-1">
                 <div className="content">
                   <div className="content">
-                    {mainpitch.title && (
+                    {mainPitch.title && (
                       <div className="tile">
-                        <h1 className="title">{mainpitch.title}</h1>
+                        <h1 className="title">{mainPitch.title}</h1>
                       </div>
                     )}
                     <div className="tile">
-                      <h3 className="subtitle">{mainpitch.description}</h3>
+                      <h3 className="subtitle">{mainPitch.description}</h3>
                     </div>
                   </div>
                   <div className="columns">
@@ -92,11 +90,9 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
+        hero={frontmatter.hero}
+        mainPitch={frontmatter.mainPitch}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         blurbs={frontmatter.blurbs}
       />
@@ -118,18 +114,20 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
-        image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+        hero {
+          title
+          subheading
+          backgroundImage {
+            childImageSharp {
+              gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+            }
           }
         }
-        heading
-        subheading
-        mainpitch {
+        mainPitch {
           title
           description
         }
+        heading
         description
         blurbs {
           title
