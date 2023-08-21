@@ -54,3 +54,11 @@ CMS.registerPreviewTemplate('index', IndexPagePreview)
 CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate('blog', BlogPostPreview)
+
+// 3. Poll Netlify Status
+const pollingDelayInMs = 2000
+async function updateNetlifyStatusBadge() {
+  await fetch(deployStatusImg.src, {cache: 'reload', mode: 'no-cors'})
+  setTimeout(updateNetlifyStatusBadge, pollingDelayInMs);
+}
+setTimeout(updateNetlifyStatusBadge, pollingDelayInMs);
