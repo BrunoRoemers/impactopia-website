@@ -236,4 +236,4 @@ collections:
         editor:
           preview: false
         fields:
-          - { label: TEMP, name: temp, widget: string }
+          - { label: Logo, name: logoImage, widget: image }
