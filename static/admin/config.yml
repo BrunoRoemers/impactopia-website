@@ -19,12 +19,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "blog-post",
-        }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
@@ -195,3 +190,20 @@ collections:
                   },
                 ],
             }
+  - name: "settings"
+    label: "Settings"
+    files:
+      - file: "src/settings/header.yml"
+        label: "Header"
+        name: "header"
+        editor:
+          preview: false
+        fields:
+          - { label: Logo, name: logo_image, widget: image }
+      - file: "src/settings/footer.yml"
+        label: "Footer"
+        name: "footer"
+        editor:
+          preview: false
+        fields:
+          - { label: TEMP, name: temp, widget: string }
