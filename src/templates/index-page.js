@@ -16,7 +16,7 @@ export const IndexPageTemplate = ({
   subheading,
   mainpitch,
   description,
-  intro,
+  blurbs,
 }) => {
   const heroImage = getImage(image) || image;
 
@@ -30,9 +30,11 @@ export const IndexPageTemplate = ({
               <div className="column is-10 is-offset-1">
                 <div className="content">
                   <div className="content">
-                    <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
+                    {mainpitch.title && (
+                      <div className="tile">
+                        <h1 className="title">{mainpitch.title}</h1>
+                      </div>
+                    )}
                     <div className="tile">
                       <h3 className="subtitle">{mainpitch.description}</h3>
                     </div>
@@ -45,17 +47,17 @@ export const IndexPageTemplate = ({
                       <p>{description}</p>
                     </div>
                   </div>
-                  <Features gridItems={intro.blurbs} />
-                  <div className="columns">
+                  <Features gridItems={blurbs} />
+                  {/* <div className="columns">
                     <div className="column is-12 has-text-centered">
                       <Link className="btn" to="/products">
                         See all products
                       </Link>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="column is-12">
                     <h3 className="has-text-weight-semibold is-size-2">
-                      Latest stories
+                      Latest Posts
                     </h3>
                     <BlogRoll />
                     <div className="column is-12 has-text-centered">
@@ -81,9 +83,7 @@ IndexPageTemplate.propTypes = {
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  blurbs: PropTypes.array,
 };
 
 const IndexPage = ({ data }) => {
@@ -98,7 +98,7 @@ const IndexPage = ({ data }) => {
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
+        blurbs={frontmatter.blurbs}
       />
     </Layout>
   );
@@ -131,17 +131,14 @@ export const pageQuery = graphql`
           description
         }
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
+        blurbs {
+          title
+          text
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
             }
-            text
           }
-          heading
-          description
         }
       }
     }
