@@ -259,3 +259,22 @@ collections:
                   { label: Open In New Tab, name: external, widget: boolean, default: false },
                 ]
             }
+          - { label: "Icons",
+              label_singular: "Add icon",
+              name: "icons",
+              widget: "list",
+              fields:
+                [
+                  {
+                    label: Icon,
+                    name: id,
+                    widget: select,
+                    options: [
+                      { label: "Twitter", value: "twitter" },
+                      { label: "Youtube", value: "youtube" },
+                    ]
+                  },
+                  { label: Url, name: url, widget: string },
+                  { label: Open In New Tab, name: external, widget: boolean, default: false },
+                ]
+            }

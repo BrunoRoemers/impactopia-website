@@ -6,9 +6,24 @@ import instagram from "../img/social/instagram.svg";
 import twitter from "../img/social/twitter.svg";
 import vimeo from "../img/social/vimeo.svg";
 import useFooterSettings from "../hooks/useFooterSettings";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+
+const supportedIcons = {
+  twitter: {
+    tooltip: "Twitter",
+    icon: faTwitter,
+  },
+  youtube: {
+    tooltip: "YouTube",
+    icon: faYoutube,
+  },
+};
 
 const Footer = () => {
-  const { logoImage, leftMenuItems, rightMenuItems } = useFooterSettings();
+  const { logoImage, leftMenuItems, rightMenuItems, icons } =
+    useFooterSettings();
 
   return (
     <footer className="footer has-background-black has-text-white-ter">
@@ -72,35 +87,31 @@ const Footer = () => {
               </section>
             </div>
             <div className="column is-4 social">
-              <a title="facebook" href="https://facebook.com">
-                <img
-                  src={facebook}
-                  alt="Facebook"
-                  style={{ width: "1em", height: "1em" }}
-                />
-              </a>
-              <a title="twitter" href="https://twitter.com">
-                <img
-                  className="fas fa-lg"
-                  src={twitter}
-                  alt="Twitter"
-                  style={{ width: "1em", height: "1em" }}
-                />
-              </a>
-              <a title="instagram" href="https://instagram.com">
-                <img
-                  src={instagram}
-                  alt="Instagram"
-                  style={{ width: "1em", height: "1em" }}
-                />
-              </a>
-              <a title="vimeo" href="https://vimeo.com">
-                <img
-                  src={vimeo}
-                  alt="Vimeo"
-                  style={{ width: "1em", height: "1em" }}
-                />
-              </a>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                {icons
+                  .filter(({ id }) => supportedIcons.hasOwnProperty(id))
+                  .map((icon) => ({ ...icon, ...supportedIcons[icon.id] }))
+                  .map(({ url, external, tooltip, icon }) => (
+                    <Link
+                      to={url}
+                      title={tooltip}
+                      target={external ? "_blank" : null}
+                      rel={external ? "noopener noreferrer" : null}
+                      style={{
+                        color: "black",
+                        width: "2.5rem",
+                        height: "2.5rem",
+                        borderRadius: "50%",
+                        padding: "0",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <FontAwesomeIcon icon={icon} />
+                    </Link>
+                  ))}
+              </div>
             </div>
           </div>
         </div>

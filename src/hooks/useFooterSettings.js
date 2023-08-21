@@ -16,6 +16,11 @@ const useFooterSettings = () => {
             url
             external
           }
+          icons {
+            id
+            url
+            external
+          }
         }
       }
     `
