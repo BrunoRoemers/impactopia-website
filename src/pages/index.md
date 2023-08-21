@@ -7,14 +7,13 @@ hero:
   logo: /img/impactopia-logo-square-high-res_adobe_express-logo-only.svg
 mainPitch:
   title: ""
-  description: Impactopia is a community of people seeking to explore together all
-    the facets of cooperativism, web3, common goods, shared governance, and
-    collective intelligence to make a change and build a different world.
+  description: We are uniting cooperatives, decentralised autonomous organisations
+    (DAO’s), collectives, commons, and like-minded humans to drive positive
+    impact in our communities and beyond.
 heading: Our Values
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
+description: Impactopia is a community of people seeking to explore together all
+  the facets of cooperativism, web3, common goods, shared governance, and
+  collective intelligence to make a change and build a different world.
 blurbs:
   - title: Collaboration
     text: We think, design and make decisions together. We know that collective
