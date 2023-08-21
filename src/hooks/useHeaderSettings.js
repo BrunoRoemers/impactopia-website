@@ -5,8 +5,13 @@ const useHeaderSettings = () => {
     graphql`
       query HEADER_SETTINGS_QUERY {
         headerSettings {
-          logo_image
-          menu_items {
+          logoImage
+          menuItems {
+            label
+            url
+            external
+          }
+          cta {
             label
             url
             external

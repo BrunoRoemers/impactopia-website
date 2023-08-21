@@ -208,16 +208,26 @@ collections:
         editor:
           preview: false
         fields:
-          - { label: Logo, name: logo_image, widget: image }
+          - { label: Logo, name: logoImage, widget: image }
           - { label: "Menu Items",
               label_singular: "Add menu item",
-              name: "menu_items",
+              name: "menuItems",
               widget: "list",
               fields:
                 [
                   { label: Label, name: label, widget: string },
                   { label: Url, name: url, widget: string },
-                  { label: Open In New Tab, name: external, widget: boolean, required: false },
+                  { label: Open In New Tab, name: external, widget: boolean, default: false },
+                ]
+            }
+          - { label: "Call To Action",
+              name: "cta",
+              widget: "object",
+              fields:
+                [
+                  { label: Label, name: label, widget: string },
+                  { label: Url, name: url, widget: string },
+                  { label: Open In New Tab, name: external, widget: boolean, default: false },
                 ]
             }
       - file: "src/settings/footer.yml"
