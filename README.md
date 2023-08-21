@@ -1,6 +1,14 @@
-# Gatsby + Decap CMS Starter
+# Impactopia Website
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b256f778-fff4-4150-8db1-03f9b3c510d2/deploy-status)](https://app.netlify.com/sites/impactopia/deploys)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
+## Running Locally
+first terminal tab: `ntl dev`
+
+second terminal tab: `npx netlify-cms-proxy-server` (allows editing local markdown files with Decap CMS)
+
+## Original README: Gatsby + Decap CMS Starter
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b256f778-fff4-4150-8db1-03f9b3c510d2/deploy-status)](https://app.netlify.com/sites/impactopia/deploys)
 
 **Note:** This starter uses [Gatsby v4](https://www.gatsbyjs.com/gatsby-4/).
 
@@ -8,7 +16,7 @@ This repo contains an example business website that is built with [Gatsby](https
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
-## Features
+### Features
 
 - A simple landing page with blog functionality built with Decap CMS
 - Editable Pages: Landing, About, Product, Blog-Collection and Contact page with Netlify Form support
@@ -24,13 +32,13 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Perfect score on Lighthouse for SEO, Accessibility and Performance (wip:PWA)
 - ..and more
 
-## Prerequisites
+### Prerequisites
 
 - Minimal Node.js version 14.15.0
 - [Gatsby CLI](https://www.gatsbyjs.com/docs/reference/gatsby-cli/)
 - [Netlify CLI](https://github.com/netlify/cli)
 
-## Getting Started (Recommended)
+### Getting Started (Recommended)
 
 Decap CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. The example here is the Kaldi coffee company template (adapted from [One Click Hugo CMS](https://github.com/decaporg/one-click-hugo-cms)). Use the button below to build and deploy your own copy of the repository:
 
@@ -38,7 +46,7 @@ Decap CMS can run in any frontend web environment, but the quickest way to try i
 
 After clicking that button, you’ll authenticate with GitHub and choose a repository name. Netlify will then automatically create a repository in your GitHub account with a copy of the files from the template. Next, it will build and deploy the new site on Netlify, bringing you to the site dashboard when the build is complete. Next, you’ll need to set up Netlify’s Identity service to authorize users to log in to the CMS.
 
-### Access Locally
+#### Access Locally
 
 Pulldown a local copy of the Github repository Netlify created for you, with the name you specified in the previous step
 
@@ -58,7 +66,7 @@ $ npm run build
 $ netlify dev # or ntl dev
 ```
 
-### Media Libraries (installed, but optional)
+#### Media Libraries (installed, but optional)
 
 Media Libraries have been included in this starter as a default. If you are not planning to use `Uploadcare` or `Cloudinary` in your project, you **can** remove them from module import and registration in `src/cms/cms.js`. Here is an example of the lines to comment or remove them your project.
 
@@ -94,7 +102,7 @@ OR
 yarn remove netlify-cms-media-library-cloudinary
 ```
 
-## Getting Started (Without Netlify)
+### Getting Started (Without Netlify)
 
 ```
 $ gatsby new [SITE_DIRECTORY_NAME] https://github.com/decaporg/gatsby-starter-decap-cms/
@@ -103,7 +111,7 @@ $ npm run build
 $ npm run start
 ```
 
-### Setting up the CMS
+#### Setting up the CMS
 
 Follow the [Decap CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting for production.
 
@@ -111,7 +119,7 @@ If you want use Decap CMS locally, run the site in one terminal with `npm run st
 Terminal you can use `npx netlify-cms-proxy-server` which proxy requests so you'll be automatically logged
 in as a user on [http:localhost:3000/admin](http:localhost:3000/admin).
 
-## Debugging
+### Debugging
 
 Windows users, who aren't using [WSL](https://docs.microsoft.com/en-us/windows/wsl/about), might encounter `node-gyp` errors when trying to npm install.
 To resolve, make sure that you have both Python 2.7 and the Visual C++ build environment installed.
@@ -125,11 +133,11 @@ npm install --global --production windows-build-tools
 
 MacOS and WSL users who might also encounter some errors, check [node-gyp](https://github.com/nodejs/node-gyp) for more info. We recommend using the latest stable node version.
 
-## Purgecss
+### Purgecss
 
 This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/) and [bulma](https://bulma.io/). The bulma builds are usually ~170K but reduced 90% by purgecss.
 
-# CONTRIBUTING
+## CONTRIBUTING
 
 Contributions are always welcome, no matter how large or small. Before contributing,
 please read the [code of conduct](CODE_OF_CONDUCT.md).
