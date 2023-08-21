@@ -8,8 +8,9 @@ import ProductPagePreview from './preview-templates/ProductPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 
 // 1. manipulate DOM to add wrapper
+const deployStatusImgSrc = "https://api.netlify.com/api/v1/badges/b256f778-fff4-4150-8db1-03f9b3c510d2/deploy-status"
 const deployStatusImg = document.createElement('img')
-deployStatusImg.src = "https://api.netlify.com/api/v1/badges/b256f778-fff4-4150-8db1-03f9b3c510d2/deploy-status"
+deployStatusImg.src = deployStatusImgSrc
 deployStatusImg.style.display = "block"
 
 const deployStatusLink = document.createElement('a')
@@ -58,7 +59,10 @@ CMS.registerPreviewTemplate('blog', BlogPostPreview)
 // 3. Poll Netlify Status
 const pollingDelayInMs = 2000
 async function updateNetlifyStatusBadge() {
-  await fetch(deployStatusImg.src, {cache: 'reload', mode: 'no-cors'})
+  // force browser to rerender the image
+  deployStatusImg.src = deployStatusImgSrc + '#' + new Date().getMilliseconds()
+
+  // queue next update
   setTimeout(updateNetlifyStatusBadge, pollingDelayInMs);
 }
 setTimeout(updateNetlifyStatusBadge, pollingDelayInMs);
