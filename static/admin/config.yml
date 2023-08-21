@@ -209,6 +209,17 @@ collections:
           preview: false
         fields:
           - { label: Logo, name: logo_image, widget: image }
+          - { label: "Menu Items",
+              label_singular: "Add menu item",
+              name: "menu_items",
+              widget: "list",
+              fields:
+                [
+                  { label: Label, name: label, widget: string },
+                  { label: Url, name: url, widget: string },
+                  { label: Open In New Tab, name: external, widget: boolean, required: false },
+                ]
+            }
       - file: "src/settings/footer.yml"
         label: "Footer"
         name: "footer"

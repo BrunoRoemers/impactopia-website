@@ -6,10 +6,15 @@ const useHeaderSettings = () => {
       query HEADER_SETTINGS_QUERY {
         headerSettings {
           logo_image
+          menu_items {
+            label
+            url
+            external
+          }
         }
       }
     `
-  )
+  );
   return headerSettings
 }
 

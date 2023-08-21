@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav
       className="navbar is-transparent"
       role="navigation"
-      aria-label="main-navigation"  
+      aria-label="main-navigation"
     >
       <div className="container">
         <div className="navbar-brand">
@@ -29,36 +29,24 @@ const Navbar = () => {
             <span />
           </button>
         </div>
-        <ul id="navMenu" className={` navbar-start has-text-centered navbar-menu ${isActive && "is-active"}`}>
-            {/* TODO: inline override of padding is a result of refactoring
-                to a ul for accessibilty purposes, would like to see a css
-                re-write that makes this unneccesary.
-             */}
-            <li className="navbar-item" style={{padding: "0px"}}>
-              <Link className="navbar-item" to="/about">
-                About
+        <ul
+          id="navMenu"
+          className={` navbar-start has-text-centered navbar-menu ${
+            isActive && "is-active"
+          }`}
+        >
+          {headerSettings.menu_items.map(({ label, url, external }, i) => (
+            <li key={i} className="navbar-item" style={{ padding: "0px" }}>
+              <Link
+                className="navbar-item"
+                to={url}
+                target={external ? "_blank" : null}
+                rel={external ? "noopener noreferrer" : null}
+              >
+                {label}
               </Link>
             </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/products">
-              Products
-            </Link>
-            </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/blog">
-              Blog
-            </Link>
-            </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/contact">
-              Contact
-            </Link>
-            </li>
-            <li className="navbar-item" style={{padding: "0px"}}>
-            <Link className="navbar-item" to="/contact/examples">
-              Form Examples
-            </Link>
-            </li>
+          ))}
           <li className="navbar-end has-text-centered">
             <a
               className="navbar-item"
