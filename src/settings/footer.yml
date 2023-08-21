@@ -1,1 +1,12 @@
 logoImage: /img/impactopia-logo-square-high-res_adobe_express-logo-only.svg
+leftMenuItems:
+  - external: false
+    label: Home
+    url: /
+  - external: false
+    label: Blog
+    url: /blog
+rightMenuItems:
+  - external: true
+    label: Gitcoin Grant
+    url: https://explorer.gitcoin.co/#/round/10/0x2871742b184633f8dc8546c6301cbc209945033e/0x2871742b184633f8dc8546c6301cbc209945033e-112

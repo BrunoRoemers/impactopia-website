@@ -6,6 +6,16 @@ const useFooterSettings = () => {
       query FOOTER_SETTINGS_QUERY {
         footerSettings {
           logoImage
+          leftMenuItems {
+            label
+            url
+            external
+          }
+          rightMenuItems {
+            label
+            url
+            external
+          }
         }
       }
     `

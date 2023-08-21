@@ -237,3 +237,25 @@ collections:
           preview: false
         fields:
           - { label: Logo, name: logoImage, widget: image }
+          - { label: "Left Menu",
+              label_singular: "Add menu item",
+              name: "leftMenuItems",
+              widget: "list",
+              fields:
+                [
+                  { label: Label, name: label, widget: string },
+                  { label: Url, name: url, widget: string },
+                  { label: Open In New Tab, name: external, widget: boolean, default: false },
+                ]
+            }
+          - { label: "Right Menu",
+              label_singular: "Add menu item",
+              name: "rightMenuItems",
+              widget: "list",
+              fields:
+                [
+                  { label: Label, name: label, widget: string },
+                  { label: Url, name: url, widget: string },
+                  { label: Open In New Tab, name: external, widget: boolean, default: false },
+                ]
+            }

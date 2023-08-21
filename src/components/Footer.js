@@ -8,7 +8,7 @@ import vimeo from "../img/social/vimeo.svg";
 import useFooterSettings from "../hooks/useFooterSettings";
 
 const Footer = () => {
-  const { logoImage } = useFooterSettings();
+  const { logoImage, leftMenuItems, rightMenuItems } = useFooterSettings();
 
   return (
     <footer className="footer has-background-black has-text-white-ter">
@@ -38,52 +38,36 @@ const Footer = () => {
             <div className="column is-4">
               <section className="menu">
                 <ul className="menu-list">
-                  <li>
-                    <Link to="/" className="navbar-item">
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to="/about">
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to="/products">
-                      Products
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to="/contact/examples">
-                      Form Examples
-                    </Link>
-                  </li>
-                  <li>
-                    <a
-                      className="navbar-item"
-                      href="/admin/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Admin
-                    </a>
-                  </li>
+                  {leftMenuItems.map(({ label, url, external }) => (
+                    <li>
+                      <Link
+                        to={url}
+                        className="navbar-item"
+                        target={external ? "_blank" : null}
+                        rel={external ? "noopener noreferrer" : null}
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </section>
             </div>
             <div className="column is-4">
               <section>
                 <ul className="menu-list">
-                  <li>
-                    <Link className="navbar-item" to="/blog">
-                      Latest Stories
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="navbar-item" to="/contact">
-                      Contact
-                    </Link>
-                  </li>
+                  {rightMenuItems.map(({ label, url, external }) => (
+                    <li>
+                      <Link
+                        to={url}
+                        className="navbar-item"
+                        target={external ? "_blank" : null}
+                        rel={external ? "noopener noreferrer" : null}
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </section>
             </div>
