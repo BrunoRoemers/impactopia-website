@@ -1,10 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
 
-import facebook from "../img/social/facebook.svg";
-import instagram from "../img/social/instagram.svg";
-import twitter from "../img/social/twitter.svg";
-import vimeo from "../img/social/vimeo.svg";
 import useFooterSettings from "../hooks/useFooterSettings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -53,8 +49,8 @@ const Footer = () => {
             <div className="column is-4">
               <section className="menu">
                 <ul className="menu-list">
-                  {leftMenuItems.map(({ label, url, external }) => (
-                    <li>
+                  {leftMenuItems.map(({ label, url, external }, i) => (
+                    <li key={label}>
                       <Link
                         to={url}
                         className="navbar-item"
@@ -71,8 +67,8 @@ const Footer = () => {
             <div className="column is-4">
               <section>
                 <ul className="menu-list">
-                  {rightMenuItems.map(({ label, url, external }) => (
-                    <li>
+                  {rightMenuItems.map(({ label, url, external }, i) => (
+                    <li key={label}>
                       <Link
                         to={url}
                         className="navbar-item"
@@ -91,8 +87,9 @@ const Footer = () => {
                 {icons
                   .filter(({ id }) => supportedIcons.hasOwnProperty(id))
                   .map((icon) => ({ ...icon, ...supportedIcons[icon.id] }))
-                  .map(({ url, external, tooltip, icon }) => (
+                  .map(({ id, url, external, tooltip, icon }, i) => (
                     <Link
+                      key={id}
                       to={url}
                       title={tooltip}
                       target={external ? "_blank" : null}
