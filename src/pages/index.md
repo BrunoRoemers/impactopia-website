@@ -10,7 +10,7 @@ mainPitch:
   description: We are uniting cooperatives, decentralised autonomous organisations
     (DAO’s), collectives, commons, and like-minded humans to drive positive
     impact in our communities and beyond.
-heading: Our Values
+heading: ""
 description: Impactopia is a community of people seeking to explore together all
   the facets of cooperativism, web3, common goods, shared governance, and
   collective intelligence to make a change and build a different world.

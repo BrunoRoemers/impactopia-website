@@ -15,7 +15,7 @@ const BlogRollTemplate = (props) => {
           <div className="is-parent column is-6" key={post.id}>
             <article
               className={`blog-list-item tile is-child box notification ${
-                post.frontmatter.featuredpost ? 'is-featured' : ''
+                post.frontmatter.featuredpost ? "is-featured" : ""
               }`}
             >
               <header>
@@ -34,7 +34,7 @@ const BlogRollTemplate = (props) => {
                       }}
                     />
                   </div>
-                ) }
+                )}
                 <p className="post-meta">
                   <Link
                     className="title has-text-primary is-size-4"
@@ -42,10 +42,10 @@ const BlogRollTemplate = (props) => {
                   >
                     {post.frontmatter.title}
                   </Link>
-                  <span> &bull; </span>
+                  {/* <span> &bull; </span>
                   <span className="subtitle is-size-5 is-block">
                     {post.frontmatter.date}
-                  </span>
+                  </span> */}
                 </p>
               </header>
               <p>
@@ -60,7 +60,7 @@ const BlogRollTemplate = (props) => {
           </div>
         ))}
     </div>
-  )
+  );
 }
 
 BlogRoll.propTypes = {
