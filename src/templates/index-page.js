@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
+import TallyForm from "../components/TallyForm";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -75,6 +76,17 @@ export const IndexPageTemplate = ({
                           Read more
                         </Link>
                       </div>
+                    </div>
+                  </div>
+                  <div className="columns">
+                    <div className="column is-12">
+                      <h3
+                        id="join"
+                        className="has-text-weight-semibold is-size-2"
+                      >
+                        Stay in the Loop
+                      </h3>
+                      <TallyForm url="https://tally.so/embed/w5bZKP?alignLeft=1&hideTitle=1&dynamicHeight=1" />
                     </div>
                   </div>
                 </div>
