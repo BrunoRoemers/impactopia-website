@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 import "../style/bulma-style.sass";
 import "../style/custom-style.sass";
 import useSiteMetadata from "../hooks/useSiteMetadata";
