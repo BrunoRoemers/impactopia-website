@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Impactopia",
     description: "Impactopia",
-    siteUrl: "https://new.impactopia.earth", // without trailing slash!
+    siteUrl: "https://impactopia.earth", // without trailing slash!
   },
   plugins: [
     "gatsby-plugin-react-helmet",
