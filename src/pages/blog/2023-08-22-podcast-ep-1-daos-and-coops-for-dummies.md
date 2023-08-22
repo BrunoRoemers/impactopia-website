@@ -1,5 +1,11 @@
 ---
 templateKey: blog-post
+metadata:
+  image: /img/impactopia-podcast-ep1-thumbnail.webp
+  description: Impactopia's first podcast is an informative and engaging
+    conversation about DAOs and co-ops or dummies, featuring two prominent guest
+    speakers.
+  title: "Podcast Ep. 1: DAOs and Coops for Dummies"
 title: "Podcast Ep. 1: DAOs and Coops for Dummies"
 date: 2023-03-29T00:12:47.900Z
 featuredpost: false

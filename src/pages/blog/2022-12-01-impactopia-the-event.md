@@ -1,5 +1,11 @@
 ---
 templateKey: blog-post
+metadata:
+  title: Impactopia - The Event
+  description: Impactopia ambitions to be the first-ever real-life town hall where
+    like-minded coops, DAOs, non-profits, citizens, activists, and artists join
+    forces to create and build a new economic system for Humankind.
+  image: /img/austin-distel-wd1lrb9oeeo-unsplash.jpg
 title: Impactopia - The Event
 date: 2022-12-01T01:09:25.965Z
 featuredpost: false

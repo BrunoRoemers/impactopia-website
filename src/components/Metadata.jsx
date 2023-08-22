@@ -32,7 +32,7 @@ const Metadata = ({
       <meta property="og:type" content="website" />
       <meta
         property="og:image"
-        content={location.origin + imageData.images.fallback.src}
+        content={siteUrl + imageData.images.fallback.src}
       />
       <meta property="og:image:width" content={imageData.width} />
       <meta property="og:image:height" content={imageData.height} />

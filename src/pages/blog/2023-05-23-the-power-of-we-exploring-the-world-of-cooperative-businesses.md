@@ -1,5 +1,12 @@
 ---
 templateKey: blog-post
+metadata:
+  title: "The Power of We: Exploring the World of Cooperative Businesses"
+  description: When people come together to achieve a common goal, something
+    magical happens. A sense of community is born, values are shared, and
+    powerful connections are made. This is precisely what cooperatives (coops)
+    are all about.
+  image: /img/hannah-busing-zyx1bk9mqma-unsplash.jpg
 title: "The Power of We: Exploring the World of Cooperative Businesses"
 date: 2023-05-23T22:13:13.337Z
 description: ""

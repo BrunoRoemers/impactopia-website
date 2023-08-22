@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import Metadata from "../components/Metadata";
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
@@ -57,9 +58,17 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
+  const { metadata } = post.frontmatter;
 
   return (
     <Layout>
+      <Metadata
+        title={metadata?.title}
+        socialTitle={metadata?.socialTitle}
+        description={metadata?.description}
+        socialDescription={metadata?.socialDescription}
+        image={metadata?.image}
+      />
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -98,6 +107,17 @@ export const pageQuery = graphql`
         title
         description
         tags
+        metadata {
+          title
+          socialTitle
+          description
+          socialDescription
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 1600)
+            }
+          }
+        }
       }
     }
   }
