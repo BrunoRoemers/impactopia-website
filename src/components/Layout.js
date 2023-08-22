@@ -6,9 +6,11 @@ import "../style/bulma-style.sass";
 import "../style/custom-style.sass";
 import useSiteMetadata from "../hooks/useSiteMetadata";
 import { withPrefix } from "gatsby";
+import { useLocation } from "@reach/router";
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata();
+  const { title, description, siteUrl } = useSiteMetadata();
+  const location = useLocation();
   return (
     <div>
       <Helmet>
@@ -43,7 +45,8 @@ const TemplateWrapper = ({ children }) => {
 
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
+        <meta property="og:url" content={`${siteUrl}${location.pathname}`} />
+        <meta property="og:description" content={description} />
         <meta
           property="og:image"
           content={`${withPrefix("/")}img/og-image.jpg`}
