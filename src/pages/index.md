@@ -1,5 +1,12 @@
 ---
 templateKey: index-page
+metadata:
+  title: Meet Impactopia
+  description: Impactopia unites cooperatives, DAOs, collectives and commoners to
+    drive positive impact in our communities and beyond.
+  image: /img/jaimie-phillips-kamss2eucza-unsplash.jpg
+  socialTitle: ""
+  socialDescription: ""
 hero:
   title: ""
   subheading: ""

@@ -1,5 +1,12 @@
 ---
 published: false
+# since this page is not published, we utilize it to force the graphql schema
+metadata:
+  title: blah
+  socialTitle: blah
+  description: blah
+  socialDescription: blah
+  image: /img/jaimie-phillips-kamss2eucza-unsplash.jpg
 templateKey: about-page
 path: /about
 title: About our values

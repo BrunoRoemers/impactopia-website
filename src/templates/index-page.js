@@ -8,9 +8,11 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
 import TallyForm from "../components/TallyForm";
+import Metadata from "../components/Metadata";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
+  metadata,
   hero,
   mainPitch,
   heading,
@@ -23,6 +25,13 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
+      <Metadata
+        title={metadata.title}
+        socialTitle={metadata.socialTitle}
+        description={metadata.description}
+        socialDescription={metadata.socialDescription}
+        image={metadata.image}
+      />
       <FullWidthImage
         logo={heroLogo}
         backgroundImage={heroBackgroundImage}
@@ -112,9 +121,12 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
+  console.log(frontmatter);
+
   return (
     <Layout>
       <IndexPageTemplate
+        metadata={frontmatter.metadata}
         hero={frontmatter.hero}
         mainPitch={frontmatter.mainPitch}
         heading={frontmatter.heading}
@@ -139,6 +151,17 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
+        metadata {
+          title
+          socialTitle
+          description
+          socialDescription
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 1600)
+            }
+          }
+        }
         hero {
           title
           subheading

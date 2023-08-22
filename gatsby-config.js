@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter",
-    description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
+    title: "Impactopia",
+    description: "Impactopia",
+    siteUrl: "https://impactopia.earth", // without trailing slash!
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -46,8 +46,8 @@ module.exports = {
     {
       resolve: "gatsby-transformer-yaml",
       options: {
-        typeName: ({node}) => node.name + 'Settings'
-      }
+        typeName: ({ node }) => node.name + "Settings",
+      },
     },
     `gatsby-plugin-image`,
     "gatsby-plugin-sharp",
@@ -56,7 +56,7 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          'gatsby-remark-relative-images',
+          "gatsby-remark-relative-images",
           {
             resolve: "gatsby-remark-images",
             options: {
@@ -86,7 +86,7 @@ module.exports = {
       resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
-        purgeOnly: ['/bulma-style.sass'], // applies purging only on the bulma css file
+        purgeOnly: ["/bulma-style.sass"], // applies purging only on the bulma css file
         printRejected: true,
       },
     }, // must be after other CSS plugins
