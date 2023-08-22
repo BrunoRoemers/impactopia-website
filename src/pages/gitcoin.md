@@ -1,6 +1,11 @@
 ---
 templateKey: about-page
 title: Gitcoin Beta Round
+metadata:
+  title: Impactopia Gitcoin
+  description: Impactopia unites cooperatives, DAOs, collectives and commoners to
+    drive positive impact in our communities and beyond.
+  image: /img/jaimie-phillips-kamss2eucza-unsplash.jpg
 ---
 Thank you for taking the time to help raise awareness of our Gitcoin grant 💚
 

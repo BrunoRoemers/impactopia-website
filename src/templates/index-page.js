@@ -25,13 +25,6 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <Metadata
-        title={metadata.title}
-        socialTitle={metadata.socialTitle}
-        description={metadata.description}
-        socialDescription={metadata.socialDescription}
-        image={metadata.image}
-      />
       <FullWidthImage
         logo={heroLogo}
         backgroundImage={heroBackgroundImage}
@@ -120,11 +113,17 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-
-  console.log(frontmatter);
+  const { metadata } = frontmatter;
 
   return (
     <Layout>
+      <Metadata
+        title={metadata?.title}
+        socialTitle={metadata?.socialTitle}
+        description={metadata?.description}
+        socialDescription={metadata?.socialDescription}
+        image={metadata?.image}
+      />
       <IndexPageTemplate
         metadata={frontmatter.metadata}
         hero={frontmatter.hero}

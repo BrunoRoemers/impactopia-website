@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import Metadata from "../components/Metadata";
 
 // eslint-disable-next-line
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
@@ -34,9 +35,17 @@ AboutPageTemplate.propTypes = {
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
+  const { metadata } = post.frontmatter;
 
   return (
     <Layout>
+      <Metadata
+        title={metadata?.title}
+        socialTitle={metadata?.socialTitle}
+        description={metadata?.description}
+        socialDescription={metadata?.socialDescription}
+        image={metadata?.image}
+      />
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -58,6 +67,17 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        metadata {
+          title
+          socialTitle
+          description
+          socialDescription
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 1600)
+            }
+          }
+        }
       }
     }
   }
