@@ -5,6 +5,8 @@ import useFooterSettings from "../hooks/useFooterSettings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faTelegram } from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const supportedIcons = {
   twitter: {
@@ -14,6 +16,14 @@ const supportedIcons = {
   youtube: {
     tooltip: "YouTube",
     icon: faYoutube,
+  },
+  telegram: {
+    tooltip: "Join our public Telegram Group",
+    icon: faTelegram,
+  },
+  whatsapp: {
+    tooltip: "Join our public WhatsApp Group",
+    icon: faWhatsapp,
   },
 };
 

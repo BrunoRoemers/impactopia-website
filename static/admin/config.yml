@@ -317,6 +317,8 @@ collections:
                     options: [
                       { label: "Twitter", value: "twitter" },
                       { label: "Youtube", value: "youtube" },
+                      { label: "Telegram", value: "telegram" },
+                      { label: "WhatsApp", value: "whatsapp" },
                     ]
                   },
                   { label: Url, name: url, widget: string },
