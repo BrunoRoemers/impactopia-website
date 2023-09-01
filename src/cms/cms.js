@@ -9,6 +9,8 @@ import IndexPagePreview from './preview-templates/IndexPagePreview'
 
 // NOTE: Netlify configures the BRANCH env var during build (source: https://docs.netlify.com/configure-builds/environment-variables/#git-metadata)
 // NOTE: In the build command (package.json) env var BRANCH is assigned to GATSBY_BRANCH so it's available everywhere (source: https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/#accessing-environment-variables-in-the-browser)
+console.log("BRANCH", process.env.BRANCH);
+console.log("GATSBY_BRANCH", process.env.GATSBY_BRANCH);
 const branch = process.env.GATSBY_BRANCH ?? "__UNKNOWN_BRANCH__";
 
 // 1. manipulate DOM to add wrapper
