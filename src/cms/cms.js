@@ -7,8 +7,12 @@ import BlogPostPreview from './preview-templates/BlogPostPreview'
 import ProductPagePreview from './preview-templates/ProductPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 
+// NOTE: this file is processed by Gatsby (gatsby-plugin-netlify-cms) so process.env is replaced automatically
+// NOTE: Netlify configures the BRANCH env var during build (source: https://docs.netlify.com/configure-builds/environment-variables/#git-metadata)
+const branch = process.env.BRANCH ?? "__UNKNOWN_BRANCH__";
+
 // 1. manipulate DOM to add wrapper
-const deployStatusImgSrc = "https://api.netlify.com/api/v1/badges/b256f778-fff4-4150-8db1-03f9b3c510d2/deploy-status"
+const deployStatusImgSrc = `https://api.netlify.com/api/v1/badges/b256f778-fff4-4150-8db1-03f9b3c510d2/deploy-status?branch=${branch}`;
 const deployStatusImg = document.createElement('img')
 deployStatusImg.src = deployStatusImgSrc
 deployStatusImg.style.display = "block"
