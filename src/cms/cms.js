@@ -7,8 +7,9 @@ import BlogPostPreview from './preview-templates/BlogPostPreview'
 import ProductPagePreview from './preview-templates/ProductPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 
-// NOTE: Netlify configures the BRANCH env var during build
+// NOTE: Netlify configures the BRANCH and HEAD env var during build
 //       (https://docs.netlify.com/configure-builds/environment-variables/#git-metadata)
+// NOTE: The BRANCH env var contains e.g. "pull/3/head" during PR deployment previews, the HEAD env var still contains the originating branch
 // NOTE: When starting the build command (package.json) the branch name is loaded into GATSBY_BRANCH
 //       such that it becomes available everywhere
 //       (https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/#accessing-environment-variables-in-the-browser)
