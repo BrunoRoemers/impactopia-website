@@ -51,7 +51,9 @@ const url = new URL(window.location)
 CMS.init({
   // NOTE: merges with /admin/config.yml if it exists
   config: {
-    branch: branch,
+    backend: {
+      branch: branch,
+    },
     site_url: url.origin,
   },
 });
