@@ -7,6 +7,6 @@ menuItems:
     url: https://explorer.gitcoin.co/#/round/10/0x2871742b184633f8dc8546c6301cbc209945033e/0x2871742b184633f8dc8546c6301cbc209945033e-112
     external: true
 cta:
-  label: Join our Community!!!
+  label: Join our Community!
   url: /#join
   external: false
