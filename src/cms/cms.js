@@ -7,10 +7,11 @@ import BlogPostPreview from './preview-templates/BlogPostPreview'
 import ProductPagePreview from './preview-templates/ProductPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 
-// NOTE: Netlify configures the BRANCH env var during build (source: https://docs.netlify.com/configure-builds/environment-variables/#git-metadata)
-// NOTE: In the build command (package.json) env var BRANCH is assigned to GATSBY_BRANCH so it's available everywhere (source: https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/#accessing-environment-variables-in-the-browser)
-console.log("BRANCH", process.env.BRANCH);
-console.log("GATSBY_BRANCH", process.env.GATSBY_BRANCH);
+// NOTE: Netlify configures the BRANCH env var during build
+//       (https://docs.netlify.com/configure-builds/environment-variables/#git-metadata)
+// NOTE: When starting the build command (package.json) the branch name is loaded into GATSBY_BRANCH
+//       such that it becomes available everywhere
+//       (https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/#accessing-environment-variables-in-the-browser)
 const branch = process.env.GATSBY_BRANCH ?? "__UNKNOWN_BRANCH__";
 
 // 1. manipulate DOM to add wrapper
@@ -50,9 +51,10 @@ const url = new URL(window.location)
 CMS.init({
   // NOTE: merges with /admin/config.yml if it exists
   config: {
-    site_url: url.origin
+    branch: branch,
+    site_url: url.origin,
   },
-})
+});
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
