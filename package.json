@@ -45,7 +45,7 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "npm run develop",
-    "build": "GATSBY_BRANCH=$BRANCH npm run clean && gatsby build",
+    "build": "echo $BUILD_ID && echo $BRANCH && echo $REPOSITORY_URL && npm run clean && gatsby build",
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
