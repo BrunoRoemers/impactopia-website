@@ -18,6 +18,9 @@ icons:
     id: twitter
     url: https://twitter.com/imPACTOPIAearth/
   - external: true
+    id: linkedin
+    url: https://www.linkedin.com/company/impactopia-earth
+  - external: true
     id: whatsapp
     url: https://chat.whatsapp.com/LS5y8p3i7PDKZ8DwP1zyid
   - external: true

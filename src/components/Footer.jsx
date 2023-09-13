@@ -7,6 +7,7 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const supportedIcons = {
   twitter: {
@@ -24,6 +25,10 @@ const supportedIcons = {
   whatsapp: {
     tooltip: "Join our public WhatsApp Group",
     icon: faWhatsapp,
+  },
+  linkedin: {
+    tooltip: "LinkedIn",
+    icon: faLinkedinIn,
   },
 };
 
