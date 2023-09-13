@@ -7,8 +7,16 @@ import BlogPostPreview from './preview-templates/BlogPostPreview'
 import ProductPagePreview from './preview-templates/ProductPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 
+// NOTE: Netlify configures the BRANCH and HEAD env var during build
+//       (https://docs.netlify.com/configure-builds/environment-variables/#git-metadata)
+// NOTE: The BRANCH env var contains e.g. "pull/3/head" during PR deployment previews, the HEAD env var still contains the originating branch
+// NOTE: When starting the build command (package.json) the branch name is loaded into GATSBY_BRANCH
+//       such that it becomes available everywhere
+//       (https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/#accessing-environment-variables-in-the-browser)
+const branch = process.env.GATSBY_BRANCH ?? "__UNKNOWN_BRANCH__";
+
 // 1. manipulate DOM to add wrapper
-const deployStatusImgSrc = "https://api.netlify.com/api/v1/badges/b256f778-fff4-4150-8db1-03f9b3c510d2/deploy-status"
+const deployStatusImgSrc = `https://api.netlify.com/api/v1/badges/b256f778-fff4-4150-8db1-03f9b3c510d2/deploy-status?branch=${branch}`;
 const deployStatusImg = document.createElement('img')
 deployStatusImg.src = deployStatusImgSrc
 deployStatusImg.style.display = "block"
@@ -44,9 +52,12 @@ const url = new URL(window.location)
 CMS.init({
   // NOTE: merges with /admin/config.yml if it exists
   config: {
-    site_url: url.origin
+    backend: {
+      branch: branch,
+    },
+    site_url: url.origin,
   },
-})
+});
 
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)

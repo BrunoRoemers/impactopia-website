@@ -10,6 +10,9 @@ rightMenuItems:
   - external: true
     label: Gitcoin Grant
     url: https://explorer.gitcoin.co/#/round/10/0x2871742b184633f8dc8546c6301cbc209945033e/0x2871742b184633f8dc8546c6301cbc209945033e-112
+  - external: false
+    label: Join our Community
+    url: /#join
 icons:
   - external: true
     id: youtube

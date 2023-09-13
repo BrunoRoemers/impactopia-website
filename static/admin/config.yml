@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main
+  # NOTE: branch is set programmatically in cms.js
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
     update: "Update {{collection}} “{{slug}}”"
