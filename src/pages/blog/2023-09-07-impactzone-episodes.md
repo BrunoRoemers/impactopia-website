@@ -14,7 +14,8 @@ featuredimage: /img/f5mucz_xwaarrxe.jpg
 Follow us on [https://twitter.com/impactopiaEARTH](https://twitter.com/impactopiaEARTH/) to experience ImpactZones as they happen!
 
 **Previous Episodes**
-- [#IMPACTZONE E8: Digital democracy & open-source funding w Ben West](https://twitter.com/i/spaces/1ZkKzXZQpPZJv?s=20)
+- [#IMPACTZONE E9: Empowering Workers with Opolis feat. Toad](https://twitter.com/i/spaces/1rmxPkvepkDJN?s=20)
+- [#IMPACTZONE E8: Digital democracy & open-source funding with Ben West](https://twitter.com/i/spaces/1ZkKzXZQpPZJv?s=20)
 - [#IMPACTZONE E7: Farming 3.0 - regenerative economics with Wasabi](https://twitter.com/i/spaces/1rmGPkkLRpbKN)
 - [#IMPACTZONE E6: The art of group dynamics with Jeremy Akers](https://twitter.com/i/spaces/1MnGnpkXglVxO)
 - [#IMPACTZONE E5: boosting organizational health with Francesca Pick](https://twitter.com/i/spaces/1DXGyvRXpLeJM)
