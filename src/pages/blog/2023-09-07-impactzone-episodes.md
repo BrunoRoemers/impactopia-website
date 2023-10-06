@@ -11,9 +11,12 @@ date: 2023-09-07T14:45:17.474Z
 featuredpost: false
 featuredimage: /img/f5mucz_xwaarrxe.jpg
 ---
-Follow us on [https://twitter.com/impactopiaEARTH](https://twitter.com/impactopiaEARTH/) to experience ImpactZones as they happen!
+Follow us on [https://twitter.com/impactopiaEARTH](https://twitter.com/impactopiaEARTH/) to experience ImpactZones when they happen!
 
 **Previous Episodes**
+- [#IMPACTZONE E12: Unleashing the Power of Decentralized Systems](https://twitter.com/i/spaces/1DXxyjgMVNnKM?s=20)
+- [#IMPACTZONE E11: Metacrisis & The Transformation Age ft. Stephen Reid](https://twitter.com/i/spaces/1yNGaZagjvXJj?s=20)
+- [#IMPACTZONE E10: Navigating the Waters of Regenerative Learning with MarceloReFi](https://twitter.com/i/spaces/1BRKjPzkRbpJw?s=20)
 - [#IMPACTZONE E9: Empowering Workers with Opolis feat. Toad](https://twitter.com/i/spaces/1rmxPkvepkDJN?s=20)
 - [#IMPACTZONE E8: Digital democracy & open-source funding with Ben West](https://twitter.com/i/spaces/1ZkKzXZQpPZJv?s=20)
 - [#IMPACTZONE E7: Farming 3.0 - regenerative economics with Wasabi](https://twitter.com/i/spaces/1rmGPkkLRpbKN)
